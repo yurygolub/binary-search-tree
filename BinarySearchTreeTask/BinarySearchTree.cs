@@ -149,12 +149,9 @@ namespace BinarySearchTreeTask
 
             Node<T> Min(Node<T> node)
             {
-                if (node != null)
+                if (node != null && node.Left != null)
                 {
-                    if (node.Left != null)
-                    {
-                        node = Min(node.Left);
-                    }
+                    node = Min(node.Left);
                 }
 
                 return node;
